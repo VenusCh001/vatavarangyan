@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vatavaran gyan</title>
-    <link rel="stylesheet" href="/styles/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>vatavaran gyan</title>
+  <link rel="icon" type="image/png" href="favicon/favicon.ico">
+  <link rel="stylesheet" href="/styles/styles.css" />
 </head>
 <body>
-    <div class="head">
-        <h1>वातावरण ज्ञान</h1>
+  <div class="head">
+    <h1>वातावरण ज्ञान</h1>
+  </div>
 
-    </div>
-    <div class="page-container">
-        <!-- Form Section by entering the place-->
-        <div class="form-section">
-          <form action="/submit" method="POST">
-            <div class="form-container">
-              <div class="input">
-                <label for="latitude">Enter Place</label>
-                <input type="text" id="latitude" name="place" required>
-              </div>
-              <div class="button-box">
-                <button type="submit">Submit</button>
-              </div>
-            </div>
-          </form>
-        </div>
-        
-      
-        <!-- Results Section -->
-        <div class="results-section"> 
-            <% if (locals.latitude) { %>
-              <div class="coords"><%= location %> </div>
-              <div class="stacked-info">
-                <div class="result-value"><%= temp %> <%= tempunit %></div>
-                <div class="result-value"><%= nature %></div>
-              </div>
-            <% } %>
+  <div class="page-container">
+
+
+    <!-- Form Section -->
+    <div class="form-section">
+      <form action="/submit" method="POST">
+        <div class="form-container">
+          <div class="input">
+            <label for="latitude">Enter Place</label>
+            <input type="text" id="latitude" name="place" required />
           </div>
-          
-      </div>
-      
-    
-    
-    
-        
+          <div class="button-box">
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
 
+    <!-- Results Section (only if data exists) -->
+    <% if (locals.latitude) { %>
+      <div class="results-section">
+        <div class="coords"><%= location %></div>
+        <div class="side-by-side-info">
+          <div class="info-box">
+            <div class="result-value"><%= temp %> <%= tempunit %></div>
+          </div>
+          <div class="info-box">
+            <div class="result-value"><%= nature %></div>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
 </body>
 </html>
