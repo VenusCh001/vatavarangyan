@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vatavaran gyan</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="head">
+        <h1>वातावरण ज्ञान</h1>
+
+    </div>
+    <div class="page-container">
+        <!-- Form Section-->
+        <div class="form-section">
+          <form action="/submit" method="POST">
+            <div class="form-container">
+              <div class="input">
+                <label for="latitude">Enter Latitude</label>
+                <input type="text" id="latitude" name="latitude" required>
+              </div>
+              <div class="input">
+                <label for="longitude">Enter Longitude</label>
+                <input type="text" id="longitude" name="longitude" required>
+              </div>
+              <div class="button-box">
+                <button type="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+      
+        <!-- Results Section -->
+        <div class="results-section">
+            <% if (locals.latitude) { %>
+              <div class="coords"><%= latitude %>, <%= longitude %></div>
+              <div class="stacked-info">
+                <div class="result-value"><%= temp %> <%= tempunit %></div>
+                <div class="result-value"><%= nature %></div>
+              </div>
+            <% } %>
+          </div>
+          
+      </div>
+      
+    
+    
+    
+        
+
+</body>
+</html>
