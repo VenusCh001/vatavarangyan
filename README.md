@@ -16,13 +16,15 @@
 
 ## 🛠️ Tech Stack
 
-| Layer           | Tech Used               |
-|-----------------|-------------------------|
-| Frontend        | HTML5, CSS3             |
-| Server-side     | Node.js with Express.js |
-| Templating      | EJS (Embedded JS)       |
-| Styling         | Flexbox, CSS Animations |
-| Deployment      | Render                  |
+| Layer           | Tech Used                                |
+|-----------------|------------------------------------------|
+| Frontend        | HTML5, CSS3                              |
+| Server-side     | Node.js with Express.js                  |
+| Templating      | EJS (Embedded JavaScript)                |
+| Styling         | Flexbox, CSS Animations                  |
+| Weather API     | [Open-Meteo API](https://open-meteo.com) |
+| Geocoding       | Open-Meteo's geocoding endpoint          |
+| Deployment      | Render                                   |
 
 ---
 
